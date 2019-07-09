@@ -1,0 +1,70 @@
+<div class="container" id="createFormWrapper">
+  <div class="row justify-content-center">
+    <div class="col-9 col-lg-6">
+
+      <div class="row">
+        <p class="h3">Add new country details.</p>
+      </div>
+      
+      <div class="row mb-4">
+          <p class="h6">Country Name</p>
+          <input class="col-12 form-input-field" type="text" [(ngModel)]="countryname" name="countryname" id="countryname" (keyup)="checkValidity('countryname', this.countryname, 2)" placeholder="Name">
+      </div>
+
+      <div class="row mb-4" id="visatypes">
+        <p class="h6">Visa Types</p>
+        <div class="w-100"></div>
+        <div class="col-12 check-box-wrap pl-0 pr-o" *ngFor="let visa of visas">
+          <div class="check-box mr-3" (click)="onSelect('visatypes', visa, this.selectedVisas)" id={{visa}}></div>
+          <div class="check-box-text">{{visa}} Visa</div>
+        </div>
+        
+      </div>
+
+      <div class="row mb-4" id="visareqs">
+          <p class="h6">Visa Requirements</p>
+          <div class="w-100"></div>
+          <div class="col-12 check-box-wrap pl-0 pr-o" *ngFor="let visar of visaReqs">
+            <div class="check-box mr-3" (click)="onSelect('visareqs', visar, this.selectedVisaReqs)" id={{visar}}></div>
+            <div class="check-box-text">{{visar}}</div>
+          </div>
+      </div>
+
+      <div class="row mb-4" id="routes">
+        <p class="h6">Travel Routes</p>
+        <div class="w-100"></div>
+        <div class="col-12 check-box-wrap pl-0 pr-o" *ngFor="let route of routes">
+          <div class="check-box mr-3" (click)="onSelect('routes', route, this.selectedRoutes)" id={{route}}></div>
+          <div class="check-box-text">{{route}}</div>
+        </div>  
+      </div>
+
+      <div class="row mb-4">
+        <p class="h6">Average Flight Fee</p>
+        <input class="col-12 form-input-field" type="number" [(ngModel)]="flightFee" name="flightFee" id="flightfee" (keyup)="checkValidity('flightfee', this.flightFee, 4)" placeholder="Amount">
+      </div>
+
+      <div class="row mb-4">
+        <p class="h6">Embassy Address</p>
+        <textarea class="col-12 pt-2" type="textarea" [(ngModel)]="embassyAddressOne" name="embassyaddressone" id="addressone" (keyup)="checkValidity('addressone', this.embassyAddressOne, 10)" placeholder="Address" required></textarea>
+      </div>
+
+      <div class="row mb-4">
+        <p class="h6">Embassy Address <span class="text-muted font-weight-light font-italic">optional</span></p>
+        <textarea class="col-12 pt-2" type="textarea" [(ngModel)]="embassyAddressTwo" name="embassyaddresstwo" id="addresstwo" placeholder="Address"></textarea>
+      </div>
+
+      <div class="row mb-4">
+        <p class="h6">Visa Application Link</p>
+        <textarea class="col-12 pt-2" type="textarea" [(ngModel)]="visaLink" name="visalink" id="visalink" (keyup)="checkValidity('visalink', this.visaLink, 8)" placeholder="Application Link"></textarea>
+      </div>
+
+      <div class="row justify-content-end mb-4">
+        <div class="col-4 btn px-0 py-0" (click)="onSubmit()">
+          submit
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>

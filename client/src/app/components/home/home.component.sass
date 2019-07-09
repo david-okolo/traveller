@@ -1,0 +1,67 @@
+@mixin font($font-family, $font-file, $font-weight)
+  @font-face
+    font-family: $font-family
+    src: url($font-file+'-'+$font-weight+'.ttf') format('truetype')
+    font-weight: $font-weight
+
+
+@include font('Poppins', '../../../assets/fonts/Poppins/Poppins', 'SemiBold')
+
+    
+    
+    
+$primary-color: #1f1e48
+$light-grey: #f2f2f2
+$dark-grey: #828282
+
+
+#cover 
+    width: 100vw
+    height: 100vh
+    background-color: $primary-color
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 2
+
+.columns
+    position: relative
+    z-index: 1
+    min-height: 100vh
+
+#leftColumn
+    background: hsla(0, 0, 100, 0.9)
+
+
+#title
+    color: $light-grey
+    letter-spacing: 25px
+    font-size: 48px
+    font-family: Poppins
+    font-weight: bold
+    display: block
+    position: absolute
+    z-index: 3
+
+#logo
+    // left: 15px
+    // top: 40px
+    font-size: 24px
+    font-weight: 100
+    color: #1f1e48
+    letter-spacing: 13px
+    font-family: Poppins
+    opacity: 0
+
+#wrapper
+    position: relative
+    z-index: 99
+    min-height: 100vh
+
+#wrapperdiv
+    position: relative
+    z-index: 3
+
+#copy
+    color: #f8f9fa
+    font-family: Poppins
