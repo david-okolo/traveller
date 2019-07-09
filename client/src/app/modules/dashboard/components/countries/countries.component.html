@@ -1,0 +1,13 @@
+<section class="container" id="wrapper">
+  <div class="row justify-content-center">
+    <div class="countries-list col-9 col-lg-6"  *ngIf="this.researchList && this.researchList != []">
+      <div class="country row justify-content-around" *ngFor="let research of researchList">
+        <div class="country-name col-4">{{research.countryName}}</div>
+        <ul class="country-actions col-4">
+          <li>Edit</li>
+          <li (click)="deleteResearch(research._id)">Delete</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
