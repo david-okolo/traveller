@@ -4,7 +4,7 @@ const passport = require("passport");
 const cors = require("cors");
 const config = require("./config/database");
 
-mongoose.connect(config.database+"/users", {useNewUrlParser: true});
+mongoose.connect(config.database+"/traveller", {useNewUrlParser: true});
 mongoose.connection.on('connected', ()=>{
     console.log('Database connected')
 });
