@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet name=\"main\"></router-outlet>\n<router-outlet></router-outlet>"
+module.exports = "<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -56,6 +56,17 @@ module.exports = "<div class=\"container\" id=\"loginWrapper\">\n  <div class=\"
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/modules/dashboard/components/countries/countries.component.html":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/modules/dashboard/components/countries/countries.component.html ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<section class=\"container\" id=\"wrapper\">\n  <div class=\"row justify-content-center\">\n    <div class=\"countries-list col-9 col-lg-6\"  *ngIf=\"this.researchList && this.researchList != []\">\n      <div class=\"country row justify-content-around\" *ngFor=\"let research of researchList\">\n        <div class=\"country-name col-4\">{{research.countryName}}</div>\n        <ul class=\"country-actions col-4\">\n          <li>Edit</li>\n          <li (click)=\"deleteResearch(research._id)\">Delete</li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</section>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/modules/dashboard/components/createform/createform.component.html":
 /*!*************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/modules/dashboard/components/createform/createform.component.html ***!
@@ -63,7 +74,7 @@ module.exports = "<div class=\"container\" id=\"loginWrapper\">\n  <div class=\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" id=\"createFormWrapper\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-9 col-lg-6\">\n\n      <div class=\"row\">\n        <p class=\"h3\">Add new country details.</p>\n      </div>\n      \n      <div class=\"row mb-4\">\n          <p class=\"h6\">Country Name</p>\n          <input class=\"col-12 form-input-field\" type=\"text\" [(ngModel)]=\"countryname\" name=\"countryname\" id=\"countryname\" (keyup)=\"checkValidity('countryname', this.countryname, 2)\" placeholder=\"Name\">\n      </div>\n\n      <div class=\"row mb-4\" id=\"visatypes\">\n        <p class=\"h6\">Visa Types</p>\n        <div class=\"w-100\"></div>\n        <div class=\"col-12 check-box-wrap pl-0 pr-o\" *ngFor=\"let visa of visas\">\n          <div class=\"check-box mr-3\" (click)=\"onSelect('visatypes', visa, this.selectedVisas)\" id={{visa}}></div>\n          <div class=\"check-box-text\">{{visa}} Visa</div>\n        </div>\n        \n      </div>\n\n      <div class=\"row mb-4\" id=\"visareqs\">\n          <p class=\"h6\">Visa Requirements</p>\n          <div class=\"w-100\"></div>\n          <div class=\"col-12 check-box-wrap pl-0 pr-o\" *ngFor=\"let visar of visaReqs\">\n            <div class=\"check-box mr-3\" (click)=\"onSelect('visareqs', visar, this.selectedVisaReqs)\" id={{visar}}></div>\n            <div class=\"check-box-text\">{{visar}}</div>\n          </div>\n      </div>\n\n      <div class=\"row mb-4\" id=\"routes\">\n        <p class=\"h6\">Travel Routes</p>\n        <div class=\"w-100\"></div>\n        <div class=\"col-12 check-box-wrap pl-0 pr-o\" *ngFor=\"let route of routes\">\n          <div class=\"check-box mr-3\" (click)=\"onSelect('routes', route, this.selectedRoutes)\" id={{route}}></div>\n          <div class=\"check-box-text\">{{route}}</div>\n        </div>  \n      </div>\n\n      <div class=\"row mb-4\">\n        <p class=\"h6\">Average Flight Fee</p>\n        <input class=\"col-12 form-input-field\" type=\"number\" [(ngModel)]=\"flightFee\" name=\"flightFee\" id=\"flightfee\" (keyup)=\"checkValidity('flightfee', this.flightFee, 4)\" placeholder=\"Amount\">\n      </div>\n\n      <div class=\"row mb-4\">\n        <p class=\"h6\">Embassy Address</p>\n        <textarea class=\"col-12 pt-2\" type=\"textarea\" [(ngModel)]=\"embassyAddressOne\" name=\"embassyaddressone\" id=\"addressone\" (keyup)=\"checkValidity('addressone', this.embassyAddressOne, 10)\" placeholder=\"Address\" required></textarea>\n      </div>\n\n      <div class=\"row mb-4\">\n        <p class=\"h6\">Embassy Address <span class=\"text-muted font-weight-light font-italic\">optional</span></p>\n        <textarea class=\"col-12 pt-2\" type=\"textarea\" [(ngModel)]=\"embassyAddressTwo\" name=\"embassyaddresstwo\" id=\"addresstwo\" placeholder=\"Address\"></textarea>\n      </div>\n\n      <div class=\"row mb-4\">\n        <p class=\"h6\">Visa Application Link</p>\n        <textarea class=\"col-12 pt-2\" type=\"textarea\" [(ngModel)]=\"visaLink\" name=\"visalink\" id=\"visalink\" (keyup)=\"checkValidity('visalink', this.visaLink, 8)\" placeholder=\"Application Link\"></textarea>\n      </div>\n\n      <div class=\"row justify-content-end mb-4\">\n        <div class=\"col-4 btn px-0 py-0\" (click)=\"onSubmit()\">\n          submit\n        </div>\n      </div>\n      \n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container\" id=\"createFormWrapper\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-9 col-lg-6\">\n\n      <div class=\"row\">\n        <p class=\"h3\">Add new country details.</p>\n      </div>\n      \n      <div class=\"row mb-4\">\n          <p class=\"h6\">Country Name</p>\n          <input class=\"col-12 form-input-field\" type=\"text\" [(ngModel)]=\"countryname\" name=\"countryname\" id=\"countryname\" (keyup)=\"checkValidity('countryname', this.countryname, 2)\" placeholder=\"Name\">\n      </div>\n\n      <div class=\"row mb-4\" id=\"visatypes\">\n        <p class=\"h6\">Visa Types</p>\n        <div class=\"w-100\"></div>\n        <div class=\"col-12 check-box-wrap pl-0 pr-o\" *ngFor=\"let visa of visas\">\n          <div class=\"check-box mr-3\" (click)=\"onSelect('visatypes', visa, this.selectedVisas)\" id={{visa}}></div>\n          <div class=\"check-box-text\">{{visa}} Visa</div>\n        </div>\n        \n      </div>\n\n      <div class=\"row mb-4\" id=\"visareqs\">\n          <p class=\"h6\">Visa Requirements</p>\n          <div class=\"w-100\"></div>\n          <div class=\"col-12 check-box-wrap pl-0 pr-o\" *ngFor=\"let visar of visaReqs\">\n            <div class=\"check-box mr-3\" (click)=\"onSelect('visareqs', visar, this.selectedVisaReqs)\" id={{visar}}></div>\n            <div class=\"check-box-text\">{{visar}}</div>\n          </div>\n      </div>\n\n      <div class=\"row mb-4\" id=\"routes\">\n        <p class=\"h6\">Travel Routes</p>\n        <div class=\"w-100\"></div>\n        <div class=\"col-12 check-box-wrap pl-0 pr-o\" *ngFor=\"let route of routes\">\n          <div class=\"check-box mr-3\" (click)=\"onSelect('routes', route, this.selectedRoutes)\" id={{route}}></div>\n          <div class=\"check-box-text\">{{route}}</div>\n        </div>  \n      </div>\n\n      <div class=\"row mb-4\">\n        <p class=\"h6\">Average Flight Fee</p>\n        <input class=\"col-12 form-input-field\" type=\"number\" [(ngModel)]=\"flightFee\" name=\"flightFee\" id=\"flightfee\" (keyup)=\"checkValidity('flightfee', this.flightFee, 4)\" placeholder=\"Amount\">\n      </div>\n\n      <div class=\"row mb-4\">\n        <p class=\"h6\">Embassy Address</p>\n        <textarea class=\"col-12 pt-2\" type=\"textarea\" [(ngModel)]=\"embassyAddressOne\" name=\"embassyaddressone\" id=\"addressone\" (keyup)=\"checkValidity('addressone', this.embassyAddressOne, 10)\" placeholder=\"Address\" required></textarea>\n      </div>\n\n      <div class=\"row mb-4\">\n        <p class=\"h6\">Embassy Address <span class=\"text-muted font-weight-light font-italic\">optional</span></p>\n        <textarea class=\"col-12 pt-2\" type=\"textarea\" [(ngModel)]=\"embassyAddressTwo\" name=\"embassyaddresstwo\" id=\"addresstwo\" placeholder=\"Address\"></textarea>\n      </div>\n\n      <div class=\"row mb-4\">\n        <p class=\"h6\">Visa Application Link</p>\n        <textarea class=\"col-12 pt-2\" type=\"textarea\" [(ngModel)]=\"visaLink\" name=\"visalink\" id=\"visalink\" (keyup)=\"checkValidity('visalink', this.visaLink, 8)\" placeholder=\"Application Link\"></textarea>\n      </div>\n\n      <div class=\"row justify-content-end mb-4\">\n        <div class=\"col-4 btn px-0 py-0\" id=\"submitBtn\" (click)=\"onSubmit()\">\n          submit\n        </div>\n      </div>\n      \n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -74,7 +85,7 @@ module.exports = "<div class=\"container\" id=\"createFormWrapper\">\n  <div cla
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-12 d-flex justify-content-between\" style=\"margin-top: 40px\">\n        <span class=\"logo\">TRAVLR</span>\n        <ul class=\"bar-links\">\n          <li (click)=\"showCreate()\">add country. <span class=\"bar\"></span></li>\n          <li (click)=\"showDatabase()\">view country database. <span class=\"bar\"></span></li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"wrapper\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-12 d-flex justify-content-between\" style=\"margin-top: 40px\">\n        <span class=\"logo\">TRAVLR</span>\n        <ul class=\"bar-links\">\n          <li [routerLink]=\"['createform']\" (click)=\"showCreate()\">add country. <span class=\"bar\"></span></li>\n          <li [routerLink]=\"['countries']\" (click)=\"showDatabase()\">view country database. <span class=\"bar\"></span></li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -85,7 +96,7 @@ module.exports = "<div class=\"wrapper\">\n  <div class=\"container\">\n    <div
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\" id=\"dashWrapper\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-3 d-none d-lg-flex\" id=\"sideNav\"></div>\n    <div class=\"col-9\" id=\"\">\n    \n    </div>\n  </div>\n</div>\n"
+module.exports = "<app-navbar></app-navbar>\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -373,7 +384,7 @@ var HomeComponent = /** @class */ (function () {
         //   easing: "easeInOutQuad"
         // })
         animation.finished.then(function () {
-            _this.router.navigate([{ outlets: { primary: 'createform', main: 'navbar' } }]);
+            _this.router.navigate([{ outlets: { primary: 'dashboard' } }]);
         });
     };
     HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -453,6 +464,7 @@ var LoginComponent = /** @class */ (function () {
                 .subscribe(function (data) {
                 if (data.success == true) {
                     _this.buttonAnimSuccess();
+                    localStorage.setItem('token', data.token);
                     _this.loggedIn.emit(true);
                 }
                 else {
@@ -561,6 +573,77 @@ var LoginComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/modules/dashboard/components/countries/countries.component.sass":
+/*!*********************************************************************************!*\
+  !*** ./src/app/modules/dashboard/components/countries/countries.component.sass ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "#wrapper {\n  position: relative;\n  top: 100px;\n}\n\n.country {\n  padding: 20px 0 20px 0;\n  background-color: #f2f2f2;\n}\n\n.country-actions {\n  list-style-type: none;\n  margin-bottom: 0;\n}\n\n.country-actions li {\n  display: inline-block;\n  margin-right: 10px;\n  cursor: pointer;\n}\n\n.country-actions li:nth-child(2) {\n  color: red;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9kYXNoYm9hcmQvY29tcG9uZW50cy9jb3VudHJpZXMvRDpcXHByb2plY3RzXFx0cmF2ZWxsZXJcXHNlcnZlclxcY2xpZW50L3NyY1xcYXBwXFxtb2R1bGVzXFxkYXNoYm9hcmRcXGNvbXBvbmVudHNcXGNvdW50cmllc1xcY291bnRyaWVzLmNvbXBvbmVudC5zYXNzIiwic3JjL2FwcC9tb2R1bGVzL2Rhc2hib2FyZC9jb21wb25lbnRzL2NvdW50cmllcy9jb3VudHJpZXMuY29tcG9uZW50LnNhc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBSUE7RUFDSSxrQkFBQTtFQUNBLFVBQUE7QUNISjs7QURLQTtFQUNJLHNCQUFBO0VBQ0EseUJBVFM7QUNPYjs7QURLQTtFQUNJLHFCQUFBO0VBQ0EsZ0JBQUE7QUNGSjs7QURHSTtFQUNJLHFCQUFBO0VBQ0Esa0JBQUE7RUFDQSxlQUFBO0FDRFI7O0FERUk7RUFDUSxVQUFBO0FDQVoiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL2Rhc2hib2FyZC9jb21wb25lbnRzL2NvdW50cmllcy9jb3VudHJpZXMuY29tcG9uZW50LnNhc3MiLCJzb3VyY2VzQ29udGVudCI6WyIkcHJpbWFyeS1jb2xvcjogIzFmMWU0OFxyXG4kbGlnaHQtZ3JleTogI2YyZjJmMlxyXG4kZGFyay1ncmV5OiAjODI4MjgyXHJcbiAgICBcclxuI3dyYXBwZXJcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZVxyXG4gICAgdG9wOiAxMDBweFxyXG5cclxuLmNvdW50cnlcclxuICAgIHBhZGRpbmc6IDIwcHggMCAyMHB4IDAgXHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkbGlnaHQtZ3JleVxyXG5cclxuXHJcbi5jb3VudHJ5LWFjdGlvbnNcclxuICAgIGxpc3Qtc3R5bGUtdHlwZTogbm9uZVxyXG4gICAgbWFyZ2luLWJvdHRvbTogMFxyXG4gICAgbGlcclxuICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2tcclxuICAgICAgICBtYXJnaW4tcmlnaHQ6IDEwcHhcclxuICAgICAgICBjdXJzb3I6IHBvaW50ZXJcclxuICAgIGxpOm50aC1jaGlsZCgyKVxyXG4gICAgICAgICAgICBjb2xvcjogcmVkIiwiI3dyYXBwZXIge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHRvcDogMTAwcHg7XG59XG5cbi5jb3VudHJ5IHtcbiAgcGFkZGluZzogMjBweCAwIDIwcHggMDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2YyZjJmMjtcbn1cblxuLmNvdW50cnktYWN0aW9ucyB7XG4gIGxpc3Qtc3R5bGUtdHlwZTogbm9uZTtcbiAgbWFyZ2luLWJvdHRvbTogMDtcbn1cbi5jb3VudHJ5LWFjdGlvbnMgbGkge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIG1hcmdpbi1yaWdodDogMTBweDtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuLmNvdW50cnktYWN0aW9ucyBsaTpudGgtY2hpbGQoMikge1xuICBjb2xvcjogcmVkO1xufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/modules/dashboard/components/countries/countries.component.ts":
+/*!*******************************************************************************!*\
+  !*** ./src/app/modules/dashboard/components/countries/countries.component.ts ***!
+  \*******************************************************************************/
+/*! exports provided: CountriesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CountriesComponent", function() { return CountriesComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/country.service */ "./src/app/modules/dashboard/services/country.service.ts");
+
+
+
+var CountriesComponent = /** @class */ (function () {
+    function CountriesComponent(countryService) {
+        this.countryService = countryService;
+    }
+    CountriesComponent.prototype.ngOnInit = function () {
+        this.getCountries();
+    };
+    CountriesComponent.prototype.getCountries = function () {
+        var _this = this;
+        this.countryService.getCountries()
+            .subscribe(function (data) {
+            if (data.success) {
+                _this.researchList = data.researchList;
+            }
+        });
+    };
+    CountriesComponent.prototype.deleteResearch = function (_id) {
+        var _this = this;
+        var body = {
+            id: _id
+        };
+        this.countryService.deleteCountry(body)
+            .subscribe(function (data) {
+            if (data.success) {
+                console.log(data);
+                _this.getCountries();
+            }
+        });
+    };
+    CountriesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-countries',
+            template: __webpack_require__(/*! raw-loader!./countries.component.html */ "./node_modules/raw-loader/index.js!./src/app/modules/dashboard/components/countries/countries.component.html"),
+            styles: [__webpack_require__(/*! ./countries.component.sass */ "./src/app/modules/dashboard/components/countries/countries.component.sass")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_country_service__WEBPACK_IMPORTED_MODULE_2__["CountryService"]])
+    ], CountriesComponent);
+    return CountriesComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/modules/dashboard/components/createform/createform.component.sass":
 /*!***********************************************************************************!*\
   !*** ./src/app/modules/dashboard/components/createform/createform.component.sass ***!
@@ -584,10 +667,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateformComponent", function() { return CreateformComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/country.service */ "./src/app/modules/dashboard/services/country.service.ts");
+/* harmony import */ var animejs_lib_anime_es__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! animejs/lib/anime.es */ "./node_modules/animejs/lib/anime.es.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
 
 
 var CreateformComponent = /** @class */ (function () {
-    function CreateformComponent() {
+    function CreateformComponent(countryService, router) {
+        this.countryService = countryService;
+        this.router = router;
+        this.pop = ".23, 1.25, 0.46, 1";
         this.visas = [
             'Business',
             'Family',
@@ -610,6 +702,7 @@ var CreateformComponent = /** @class */ (function () {
         this.selectedRoutes = [];
     }
     CreateformComponent.prototype.ngOnInit = function () {
+        this.submitBtn = document.getElementById('submitBtn');
     };
     CreateformComponent.prototype.onSelect = function (_el, _item, _itemArray) {
         var selected = false;
@@ -711,11 +804,32 @@ var CreateformComponent = /** @class */ (function () {
             }
         }
         if (status) {
-            return true;
+            this.submitPaper();
         }
         else {
-            return false;
+            this.buttonAnimFailed();
         }
+    };
+    CreateformComponent.prototype.submitPaper = function () {
+        var _this = this;
+        var form = {
+            countryName: this.countryname,
+            visaTypes: this.selectedVisas,
+            visaRequirements: this.selectedVisaReqs,
+            travelRoutes: this.selectedRoutes,
+            averageFlightPrice: this.flightFee,
+            address: this.embassyAddresses,
+            applicationLink: this.visaLink
+        };
+        this.countryService.postCountry(form)
+            .subscribe(function (data) {
+            if (data.success == true) {
+                _this.buttonAnimSuccess();
+            }
+            else {
+                _this.buttonAnimFailed();
+            }
+        });
     };
     CreateformComponent.prototype.checkValidity = function (_el, _data, _len) {
         if (typeof (_data) === "number") {
@@ -735,13 +849,48 @@ var CreateformComponent = /** @class */ (function () {
                 break;
         }
     };
+    CreateformComponent.prototype.buttonAnimSuccess = function () {
+        var _this = this;
+        var animation = animejs_lib_anime_es__WEBPACK_IMPORTED_MODULE_3__["default"].timeline({})
+            .add({
+            targets: this.submitBtn,
+            width: "250px",
+            borderRadius: "0px",
+            backgroundColor: "#4BB543",
+            duration: 600,
+            easing: 'cubicBezier(' + this.pop + ')'
+        });
+        animation.finished.then(function () {
+            _this.router.navigate(['dashboard', 'countries']);
+        });
+    };
+    CreateformComponent.prototype.buttonAnimFailed = function () {
+        var animation = animejs_lib_anime_es__WEBPACK_IMPORTED_MODULE_3__["default"].timeline({})
+            .add({
+            targets: this.submitBtn,
+            width: "250px",
+            borderRadius: "0px",
+            backgroundColor: "#dc3545",
+            duration: 600,
+            easing: 'cubicBezier(' + this.pop + ')'
+        })
+            .add({
+            targets: this.submitBtn,
+            width: "200px",
+            borderRadius: "0px",
+            backgroundColor: "#1f1e48",
+            duration: 300,
+            easing: 'cubicBezier(' + this.pop + ')'
+        });
+    };
     CreateformComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-createform',
             template: __webpack_require__(/*! raw-loader!./createform.component.html */ "./node_modules/raw-loader/index.js!./src/app/modules/dashboard/components/createform/createform.component.html"),
             styles: [__webpack_require__(/*! ./createform.component.sass */ "./src/app/modules/dashboard/components/createform/createform.component.sass")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_country_service__WEBPACK_IMPORTED_MODULE_2__["CountryService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
     ], CreateformComponent);
     return CreateformComponent;
 }());
@@ -818,7 +967,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _dashboard_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dashboard.component */ "./src/app/modules/dashboard/dashboard.component.ts");
 /* harmony import */ var _components_createform_createform_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/createform/createform.component */ "./src/app/modules/dashboard/components/createform/createform.component.ts");
-/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/modules/dashboard/components/navbar/navbar.component.ts");
+/* harmony import */ var _components_countries_countries_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/countries/countries.component */ "./src/app/modules/dashboard/components/countries/countries.component.ts");
 
 
 
@@ -829,15 +978,21 @@ var routes = [
     {
         path: "dashboard",
         component: _dashboard_component__WEBPACK_IMPORTED_MODULE_3__["DashboardComponent"],
-    },
-    {
-        path: "createform",
-        component: _components_createform_createform_component__WEBPACK_IMPORTED_MODULE_4__["CreateformComponent"],
-    },
-    {
-        path: "navbar",
-        component: _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_5__["NavbarComponent"],
-        outlet: "main"
+        children: [
+            {
+                path: "",
+                redirectTo: "createform",
+                pathMatch: "full"
+            },
+            {
+                path: "createform",
+                component: _components_createform_createform_component__WEBPACK_IMPORTED_MODULE_4__["CreateformComponent"]
+            },
+            {
+                path: "countries",
+                component: _components_countries_countries_component__WEBPACK_IMPORTED_MODULE_5__["CountriesComponent"]
+            }
+        ]
     }
 ];
 var DashboardRoutingModule = /** @class */ (function () {
@@ -927,6 +1082,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dashboard_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./dashboard-routing.module */ "./src/app/modules/dashboard/dashboard-routing.module.ts");
 /* harmony import */ var _components_createform_createform_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/createform/createform.component */ "./src/app/modules/dashboard/components/createform/createform.component.ts");
 /* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/modules/dashboard/components/navbar/navbar.component.ts");
+/* harmony import */ var _components_countries_countries_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/countries/countries.component */ "./src/app/modules/dashboard/components/countries/countries.component.ts");
+/* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./services/country.service */ "./src/app/modules/dashboard/services/country.service.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
 
 
 
@@ -944,18 +1105,80 @@ var DashboardModule = /** @class */ (function () {
             declarations: [
                 _dashboard_component__WEBPACK_IMPORTED_MODULE_5__["DashboardComponent"],
                 _components_createform_createform_component__WEBPACK_IMPORTED_MODULE_7__["CreateformComponent"],
-                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__["NavbarComponent"]
+                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__["NavbarComponent"],
+                _components_countries_countries_component__WEBPACK_IMPORTED_MODULE_9__["CountriesComponent"]
             ],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
-                _dashboard_routing_module__WEBPACK_IMPORTED_MODULE_6__["DashboardRoutingModule"]
+                _dashboard_routing_module__WEBPACK_IMPORTED_MODULE_6__["DashboardRoutingModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClientModule"]
             ],
-            providers: []
+            providers: [
+                _services_country_service__WEBPACK_IMPORTED_MODULE_10__["CountryService"]
+            ]
         })
     ], DashboardModule);
     return DashboardModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/modules/dashboard/services/country.service.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/modules/dashboard/services/country.service.ts ***!
+  \***************************************************************/
+/*! exports provided: CountryService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CountryService", function() { return CountryService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/auth.service */ "./src/app/services/auth.service.ts");
+
+
+
+
+var CountryService = /** @class */ (function () {
+    function CountryService(http, auth) {
+        this.http = http;
+        this.auth = auth;
+    }
+    // post(_path, _body, headers = null){
+    //   return this.http.post(this.auth.backendUrl+_path, _body, {headers})
+    // }
+    // get(_path){
+    //   return this.http.get(this.auth.backendUrl+_path)
+    // }
+    CountryService.prototype.postCountry = function (_data) {
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]();
+        headers = headers.append('Authorization', 'Bearer ' + this.auth.loadToken());
+        return this.http.post(this.auth.backendUrl + '/research/addResearch', _data, { headers: headers });
+    };
+    CountryService.prototype.getCountries = function () {
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]();
+        headers = headers.append('Authorization', 'Bearer ' + this.auth.loadToken());
+        return this.http.get(this.auth.backendUrl + '/research/getResearches', { headers: headers });
+    };
+    CountryService.prototype.deleteCountry = function (_data) {
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]();
+        headers = headers.append('Authorization', 'Bearer ' + this.auth.loadToken());
+        return this.http.post(this.auth.backendUrl + '/research/deleteResearch', _data, { headers: headers });
+    };
+    CountryService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"],
+            src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]])
+    ], CountryService);
+    return CountryService;
 }());
 
 
@@ -981,10 +1204,13 @@ __webpack_require__.r(__webpack_exports__);
 var AuthService = /** @class */ (function () {
     function AuthService(http) {
         this.http = http;
-        this.backendUrl = "/users";
+        this.backendUrl = "";
     }
+    AuthService.prototype.loadToken = function () {
+        return localStorage.getItem('token');
+    };
     AuthService.prototype.signin = function (_data) {
-        return this.http.post(this.backendUrl + "/authenticate", _data);
+        return this.http.post(this.backendUrl + "/users/authenticate", _data);
         //to handle the error
         // .pipe(
         //   catchError()
