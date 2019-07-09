@@ -419,7 +419,6 @@ let LoginComponent = class LoginComponent {
     ngOnInit() {
         this.collectVariables();
         this.moveCenter(this.wrapper);
-        // console.log(this.logoData)
     }
     collectVariables() {
         this.wrapper = document.getElementById('loginWrapper');
@@ -429,43 +428,39 @@ let LoginComponent = class LoginComponent {
         this.formHeader = document.getElementById('header');
         this.formUsername = document.getElementById('username');
         this.formPassword = document.getElementById('password');
-        // console.log(this.loginSvg)
     }
     signin() {
         let loginData = {
             username: this.username,
             password: this.password
         };
-        console.log(loginData);
         if (loginData.username == "" || loginData.password == "" || loginData.username == undefined || loginData.password == undefined) {
-            console.log("empty");
+            this.buttonAnimFailed();
         }
         else {
             this.authService.signin(loginData)
                 .subscribe(data => {
-                console.log(data);
                 if (data.success == true) {
-                    this.buttonAnim();
+                    this.buttonAnimSuccess();
                     this.loggedIn.emit(true);
+                }
+                else {
+                    this.buttonAnimFailed();
                 }
             });
         }
-        // this.buttonAnim()
-        // this.loggedIn.emit(true)
     }
     moveCenter(el) {
         let vertical = ((window.innerHeight - el.clientHeight) / 2) - (this.logoData.clientHeight + this.logoData.offsetTop);
         el.style.marginTop = vertical.toString() + 'px';
-        // console.log(vertical)
     }
     setCenter(_element, _parent) {
         let verticalCenter = (_parent.clientHeight / 2) - (_element.clientHeight / 2);
         let horizCenter = (_parent.clientWidth / 2) - (_element.clientWidth / 2);
         _element.style.top = verticalCenter.toString() + "px";
         _element.style.left = horizCenter.toString() + "px";
-        // console.log(_element)
     }
-    buttonAnim() {
+    buttonAnimSuccess() {
         let animation = animejs_lib_anime_es__WEBPACK_IMPORTED_MODULE_3__["default"].timeline({})
             .add({
             targets: this.loginBtn,
@@ -512,6 +507,25 @@ let LoginComponent = class LoginComponent {
             duration: 300,
             easing: 'easeInOutQuad'
         }, "-=100");
+    }
+    buttonAnimFailed() {
+        let animation = animejs_lib_anime_es__WEBPACK_IMPORTED_MODULE_3__["default"].timeline({})
+            .add({
+            targets: this.loginBtn,
+            width: "250px",
+            borderRadius: "0px",
+            backgroundColor: "#dc3545",
+            duration: 600,
+            easing: 'cubicBezier(' + this.pop + ')'
+        })
+            .add({
+            targets: this.loginBtn,
+            width: "200px",
+            borderRadius: "0px",
+            backgroundColor: "#1f1e48",
+            duration: 300,
+            easing: 'cubicBezier(' + this.pop + ')'
+        });
     }
 };
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

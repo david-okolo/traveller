@@ -429,7 +429,6 @@ var LoginComponent = /** @class */ (function () {
     LoginComponent.prototype.ngOnInit = function () {
         this.collectVariables();
         this.moveCenter(this.wrapper);
-        // console.log(this.logoData)
     };
     LoginComponent.prototype.collectVariables = function () {
         this.wrapper = document.getElementById('loginWrapper');
@@ -439,7 +438,6 @@ var LoginComponent = /** @class */ (function () {
         this.formHeader = document.getElementById('header');
         this.formUsername = document.getElementById('username');
         this.formPassword = document.getElementById('password');
-        // console.log(this.loginSvg)
     };
     LoginComponent.prototype.signin = function () {
         var _this = this;
@@ -447,36 +445,33 @@ var LoginComponent = /** @class */ (function () {
             username: this.username,
             password: this.password
         };
-        console.log(loginData);
         if (loginData.username == "" || loginData.password == "" || loginData.username == undefined || loginData.password == undefined) {
-            console.log("empty");
+            this.buttonAnimFailed();
         }
         else {
             this.authService.signin(loginData)
                 .subscribe(function (data) {
-                console.log(data);
                 if (data.success == true) {
-                    _this.buttonAnim();
+                    _this.buttonAnimSuccess();
                     _this.loggedIn.emit(true);
+                }
+                else {
+                    _this.buttonAnimFailed();
                 }
             });
         }
-        // this.buttonAnim()
-        // this.loggedIn.emit(true)
     };
     LoginComponent.prototype.moveCenter = function (el) {
         var vertical = ((window.innerHeight - el.clientHeight) / 2) - (this.logoData.clientHeight + this.logoData.offsetTop);
         el.style.marginTop = vertical.toString() + 'px';
-        // console.log(vertical)
     };
     LoginComponent.prototype.setCenter = function (_element, _parent) {
         var verticalCenter = (_parent.clientHeight / 2) - (_element.clientHeight / 2);
         var horizCenter = (_parent.clientWidth / 2) - (_element.clientWidth / 2);
         _element.style.top = verticalCenter.toString() + "px";
         _element.style.left = horizCenter.toString() + "px";
-        // console.log(_element)
     };
-    LoginComponent.prototype.buttonAnim = function () {
+    LoginComponent.prototype.buttonAnimSuccess = function () {
         var animation = animejs_lib_anime_es__WEBPACK_IMPORTED_MODULE_3__["default"].timeline({})
             .add({
             targets: this.loginBtn,
@@ -523,6 +518,25 @@ var LoginComponent = /** @class */ (function () {
             duration: 300,
             easing: 'easeInOutQuad'
         }, "-=100");
+    };
+    LoginComponent.prototype.buttonAnimFailed = function () {
+        var animation = animejs_lib_anime_es__WEBPACK_IMPORTED_MODULE_3__["default"].timeline({})
+            .add({
+            targets: this.loginBtn,
+            width: "250px",
+            borderRadius: "0px",
+            backgroundColor: "#dc3545",
+            duration: 600,
+            easing: 'cubicBezier(' + this.pop + ')'
+        })
+            .add({
+            targets: this.loginBtn,
+            width: "200px",
+            borderRadius: "0px",
+            backgroundColor: "#1f1e48",
+            duration: 300,
+            easing: 'cubicBezier(' + this.pop + ')'
+        });
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
