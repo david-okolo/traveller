@@ -8,12 +8,16 @@ import { catchError } from "rxjs/operators";
 })
 export class AuthService {
 
-  backendUrl:string = "/users"
+  backendUrl:string = ""
 
   constructor(private http: HttpClient) { }
 
+  loadToken(){
+    return localStorage.getItem('token');
+  }
+
   signin(_data):Observable<any>{
-    return this.http.post(this.backendUrl+"/authenticate", _data)
+    return this.http.post(this.backendUrl+"/users/authenticate", _data)
 
     //to handle the error
     // .pipe(
