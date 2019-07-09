@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { JwtHelperService } from '@auth0/angular-jwt';
 import { Observable } from 'rxjs';
 import { catchError } from "rxjs/operators";
 
@@ -8,12 +9,20 @@ import { catchError } from "rxjs/operators";
 })
 export class AuthService {
 
-  backendUrl:string = ""
+  backendUrl:string = "http://localhost:8080"
 
-  constructor(private http: HttpClient) { }
+  constructor(
+      private http: HttpClient 
+    ) { }
 
   loadToken(){
     return localStorage.getItem('token');
+  }
+
+  isTokenValid(){
+    let helper = new JwtHelperService();
+    console.log(helper.isTokenExpired(this.loadToken()))
+    return !helper.isTokenExpired(this.loadToken())
   }
 
   signin(_data):Observable<any>{
