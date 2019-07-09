@@ -34,9 +34,9 @@ app.use("/research", researches);
 app.use(express.static('./public'));
 
 //index route
-app.get('/', (req, res) => {
-    res.send('index route');
-});
+// app.get('/', (req, res) => {
+//     res.send('index route');
+// });
 
 app.listen(port, ()=>{
     console.log("Started on port " +port);
