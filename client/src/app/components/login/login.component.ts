@@ -67,6 +67,7 @@ export class LoginComponent implements OnInit {
       .subscribe(data => {
         if(data.success == true){
           this.buttonAnimSuccess();
+          localStorage.setItem('token', data.token);
           this.loggedIn.emit(true);
         }else{
           this.buttonAnimFailed();
