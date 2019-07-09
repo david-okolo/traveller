@@ -7,21 +7,26 @@ import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { CreateformComponent } from './components/createform/createform.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CountriesComponent } from './components/countries/countries.component';
+import { CountryService } from './services/country.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
         DashboardComponent,
         CreateformComponent,
-        NavbarComponent
+        NavbarComponent,
+        CountriesComponent
     ],
     imports: [
         CommonModule,
         BrowserModule,
         FormsModule,
-        DashboardRoutingModule
+        DashboardRoutingModule,
+        HttpClientModule
     ],
     providers: [
-        
+        CountryService
     ]
 })
 

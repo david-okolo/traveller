@@ -140,7 +140,7 @@ export class HomeComponent implements OnInit {
     // })
 
     animation.finished.then(()=>{
-      this.router.navigate([{outlets: {primary: 'createform', main: 'navbar'}}]);
+      this.router.navigate([{outlets: {primary: 'dashboard'}}]);
     })
   }
 }
